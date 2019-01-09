@@ -18,20 +18,16 @@ Yacc部分:
 
 在第11行定義node格式 
 
- typedef struct node{//node格式 
-
- ---------略------------ 
-
- };
+ typedef struct node{//node格式
+ 
+ --------略--------- };
 
 
  第52行，我們得知道現在在stack的變數有哪些 
 
 struct node *search_in_stack(struct node *start){//search現在有哪些變數在stack中 
 
- --------略--------- 
-
- };
+--------略--------- };
 
 
 
@@ -39,9 +35,7 @@ struct node *search_in_stack(struct node *start){//search現在有哪些變數�
 
  void put_in_stack(struct node *now){//找到函數後，若是新函數就放進stack，若不是則修改 
 
- -----------略------------------- 
-
- }
+ -----------略------------------- }
 
 
 
@@ -53,37 +47,21 @@ struct node *search_in_stack(struct node *start){//search現在有哪些變數�
 
  ------略-------- 
 
- if(op_type==1){//+ 
+ if(op_type==1){//+ ------略-------- }
 
- ------略-------- 
+ else if(op_type==2){//- ------略-------- } 
 
- else if(op_type==2){//- 
+ else if(op_type==3){// *------略-------- } 
 
- ------略-------- } 
+ else if(op_type==4){// / ------略-------- } 
 
- else if(op_type==3){// *
+ else if(op_type==5){//mod ------略-------- } 
 
- ------略-------- } 
+ else if(op_type==6){//> ------略-------- } 
 
- else if(op_type==4){// / 
+ else if(op_type==7){//<------略-------- } 
 
- ------略-------- } 
-
- else if(op_type==5){//mod 
-
- ------略-------- } 
-
- else if(op_type==6){//> 
-
- ------略-------- } 
-
- else if(op_type==7){//<
-
- ------略-------- } 
-
- else if(op_type==8){//= 
-
- ------略-------- } 
+ else if(op_type==8){//= ------略-------- } 
 
  return tem; 
 
@@ -97,17 +75,11 @@ struct node *evl_logic_op(int op_type, struct node *a, struct node *b){//logic o
 
  ------略-------- 
 
- if(op_type==1){//and 
+ if(op_type==1){//and ------略-------- } 
 
- ------略-------- } 
+ else if(op_type==2){//or------略-------- } 
 
- else if(op_type==2){//or 
-
- ------略-------- } 
-
- else if(op_type==3){//not 
-
- ------略-------- } 
+ else if(op_type==3){//not  ------略-------- } 
 
  return tem; 
 
@@ -122,35 +94,15 @@ error
 
 void print_stmt(struct node *now, int n_or_b){//輸出值
 
-if(n_or_b==2||n_or_b==3||n_or_b==4||n_or_b==8){
-
-printf("%d\n",now->value);
-
-}
+if(n_or_b==2||n_or_b==3||n_or_b==4||n_or_b==8) { printf ("%d\n",now->value)  }
 
 else if(n_or_b==1||n_or_b==5||n_or_b==9){
 
-if(now->value==1){
+##if(now->value==1){printf("#t\n");}
 
-printf("#t\n");
+##else{printf("#f\n");}}
 
-}
-
-else{
-
-printf("#f\n");
-
-}
-
-}
-
-else{
-
-printf("syntax error\n");
-
-exit(0);
-
-}
+else{ printf("syntax error\n"); exit(0);}
 
 }
 
