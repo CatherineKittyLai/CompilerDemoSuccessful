@@ -1,7 +1,8 @@
 # CompilerDemoSuccessful
 Final project 
 #################環境###################### 
-#windows，下載Bison、flex、MinGW
+
+windows，下載Bison、flex、MinGW
 
 #################作法###################### 
 #lex的部分就仿照之前的compiler上課ppt做出
